@@ -40,7 +40,6 @@ public class ElementMax_2DArray {
         System.out.println("Phần tử lớn nhất trong ma trận là: " + maxValue);
         System.out.println("Tọa độ của phần tử lớn nhất là: (" + maxRow + ", " + maxColumn + ")");
 
-        scanner.close();
     }
 }
 
