@@ -1,6 +1,7 @@
 package exercise;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ArrayCombine {
     public static void main(String[] args) {
@@ -18,9 +19,13 @@ public class ArrayCombine {
                 count++;
             }
         }
+        System.out.println("Mảng 1: " + Arrays.toString(array1));
+        System.out.println("Mảng 2: " + Arrays.toString(array2));
         System.out.println("Mảng đã gộp:");
+        System.out.print("[");
         for (Integer integer : combinedArray) {
             System.out.print(integer + ", ");
         }
+        System.out.print("]");
     }
 }
