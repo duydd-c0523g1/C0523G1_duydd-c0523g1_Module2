@@ -1,4 +1,4 @@
-package exercise;
+package ss3_array_method.bai_tap;
 public class GiaiThuat1 {
     public static void main(String[] args) {
         int n = 5; // Kích thước của hình thoi

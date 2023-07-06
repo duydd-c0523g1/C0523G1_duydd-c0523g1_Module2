@@ -1,4 +1,4 @@
-package exercise;
+package ss3_array_method.bai_tap;
 import java.util.Scanner;
 public class ArrayMinValue {
     public static void main(String[] args) {
