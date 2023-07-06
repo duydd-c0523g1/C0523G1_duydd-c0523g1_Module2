@@ -1,19 +1,19 @@
 package ss1_introduction_to_java.bai_tap;
+
 import java.util.Scanner;
+
 public class NumToWord {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nhập số từ 1 đến 999: ");
         int number = scanner.nextInt();
         scanner.close();
-
         String result = chuyenSoThanhChu(number);
         System.out.println("Kết quả: " + result);
     }
 
     public static String chuyenSoThanhChu(int number) {
         String text = "";
-
         if (number == 0) {
             text = "không";
         } else if (number < 20) {
@@ -79,7 +79,6 @@ public class NumToWord {
         } else if (number < 100) {
             int hangChuc = number / 10;
             int hangDonVi = number % 10;
-
             text = "mười";
             switch (hangChuc) {
                 case 2:
@@ -149,7 +148,6 @@ public class NumToWord {
         } else {
             text = "Số quá lớn";
         }
-
         return text;
     }
 }
