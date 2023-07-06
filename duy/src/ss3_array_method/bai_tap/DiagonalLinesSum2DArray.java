@@ -8,11 +8,10 @@ public class DiagonalLinesSum2DArray {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập vào kích thước của ma trận vuông");
         int size = scanner.nextInt();
-
         //Bước 2: Tạo mảng 2 chiều dựa trên kích thước đã nhập
         int[][] matrix = new int[size][size];
         for (int i = 0; i < size; i++) {
-            for (int j =  0; j < size; j++) {
+            for (int j = 0; j < size; j++) {
                 System.out.println("Nhập vào giá trị của hàng " + (i + 1) + " cột " + (j + 1));
                 matrix[i][j] = scanner.nextInt();
             }
@@ -24,7 +23,6 @@ public class DiagonalLinesSum2DArray {
             }
             System.out.println();
         }
-
         //Tính tổng đường chéo
         int sumLR = 0;
         int sumRL = 0;

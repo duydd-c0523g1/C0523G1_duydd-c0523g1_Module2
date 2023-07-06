@@ -1,4 +1,5 @@
 package ss2_loop.bai_tap;
+
 import java.util.Scanner;
 
 public class Shapes {
