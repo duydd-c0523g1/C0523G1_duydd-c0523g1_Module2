@@ -2,7 +2,7 @@ package exercise;
 
 import java.util.Scanner;
 
-public class DiagonalLineSum2DArray {
+public class DiagonalLinesSum2DArray {
     public static void main(String[] args) {
         //Bước 1: Tạo ma trận vuông
         Scanner scanner = new Scanner(System.in);
