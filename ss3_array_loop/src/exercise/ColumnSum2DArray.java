@@ -29,7 +29,7 @@ public class ColumnSum2DArray {
         }
         //Bước 3: Tính tổng của cột được chọn
         System.out.println("Nhập số thứ tự cuả cột để tính tổng các phần tử của cột đó");
-        int colSum = scanner.nextInt();
+        int colSum = scanner.nextInt() - 1;
         int sum = 0;
         for (int[] ints : array) {
             for (int j = 0; j < col; j++) {
