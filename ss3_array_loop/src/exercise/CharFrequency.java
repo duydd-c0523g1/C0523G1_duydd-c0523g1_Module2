@@ -1,7 +1,6 @@
 package exercise;
 
 import java.util.Scanner;
-
 public class CharFrequency {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -9,8 +8,6 @@ public class CharFrequency {
 
         //Nhập vào ký tự cần kiểm tra
         do {
-
-
             System.out.println("Nhập vào ký tự cần kiểm tra");
             char charInput = scanner.nextLine().charAt(0);
 
