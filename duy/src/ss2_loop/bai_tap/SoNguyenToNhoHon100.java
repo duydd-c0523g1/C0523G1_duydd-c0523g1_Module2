@@ -1,4 +1,4 @@
-package exercise;
+package ss2_loop.bai_tap;
 
 public class SoNguyenToNhoHon100 {
     public static void main(String[] args) {
