@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2b44a325-60ed-4107-a7f2-d635733e41c4" name="Changes" comment="1st commit">
-      <change afterPath="$PROJECT_DIR$/ss1_intro_java/exercise/Hello/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="2b44a325-60ed-4107-a7f2-d635733e41c4" name="Changes" comment="1st commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +31,6 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/CodeGym/Git/C0523G1-duydd-co523g1_Module2",
     "node.js.detected.package.eslint": "true",
@@ -70,6 +67,7 @@
       <workItem from="1688391958195" duration="264000" />
       <workItem from="1688392549288" duration="66000" />
       <workItem from="1688465124197" duration="64000" />
+      <workItem from="1688628516996" duration="188000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit">
       <option name="closed" value="true" />
