@@ -10,7 +10,6 @@ public class ColumnSum2DArray {
         int row = scanner.nextInt();
         System.out.println("Nhập số cột của mảng");
         int col = scanner.nextInt();
-
         //Bước 2: Khởi tạo mảng 2 chiều
         int[][] array = new int[row][col];
         System.out.println("Nhập giá trị cho từng phần tử trong mảng");
