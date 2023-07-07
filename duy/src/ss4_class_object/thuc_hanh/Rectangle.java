@@ -1,4 +1,5 @@
 package ss4_class_object.thuc_hanh;
+
 import java.util.Scanner;
 
 public class Rectangle {
