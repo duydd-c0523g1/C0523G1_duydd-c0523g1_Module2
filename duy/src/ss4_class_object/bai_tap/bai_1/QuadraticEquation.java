@@ -31,9 +31,7 @@ public class QuadraticEquation {
     public double getRoot1() {
         double discriminant = getDiscriminant();
         if (discriminant > 0) {
-
             return (-numB + Math.sqrt(discriminant)) / (numA * 2);
-
         } else {
             System.out.println("Phương trình vô nghiệm");
         }
@@ -43,9 +41,7 @@ public class QuadraticEquation {
     public double getRoot2() {
         double discriminant = getDiscriminant();
         if (discriminant > 0) {
-
             return (-numB + Math.sqrt(discriminant)) / (numA * 2);
-
         } else {
             System.out.println("Phương trình vô nghiệm");
         }
