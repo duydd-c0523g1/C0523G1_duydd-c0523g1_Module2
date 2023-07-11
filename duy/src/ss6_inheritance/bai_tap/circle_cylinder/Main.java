@@ -9,8 +9,8 @@ public class Main {
         cylinder.setHeight(10);
         cylinder.setColor("red");
         cylinder.setRadius(5.0);
-        System.out.println(circle.toString());
-        System.out.println(cylinder.toString());
+        System.out.println(circle);
+        System.out.println(cylinder);
         System.out.println("Diện tích hình tròn:" + circle.getArea());
         System.out.println("Thể tích hình trụ:" + cylinder.getVolume());
     }
