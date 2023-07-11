@@ -4,11 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Point2D point2D = new Point2D();
         Point3D point3D = new Point3D();
-        point2D.setX(2);
-        point2D.setY(4);
-        point3D.setX(2);
-        point3D.setY(4);
-        point3D.setZ(6);
+        point2D.setXY(2, 5);
+        point3D.setXYZ(4, 6, 7);
         System.out.println(point2D);
         System.out.println(point3D);
 

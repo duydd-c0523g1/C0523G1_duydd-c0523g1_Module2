@@ -27,10 +27,12 @@ public class Point2D {
     }
 
     public void setXY(float x, float y) {
+        this.x = x;
+        this.y = y;
     }
 
     public float[] getXY() {
-        return new float[2];
+        return new float[]{this.x, this.y};
     }
 
     @Override
