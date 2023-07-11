@@ -25,12 +25,21 @@ public class Point {
     public void setY(float y) {
         this.y = y;
     }
+
     public void setXY(float x, float y) {
-
+        this.x = x;
+        this.y = y;
     }
-    public float[] getXY() {
-        float[] xy = new float[2];
-        return xy;
 
+    public float[] getXY() {
+        return new float[]{this.x, this.y};
+    }
+
+    @Override
+    public String toString() {
+        return "Point{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
     }
 }
