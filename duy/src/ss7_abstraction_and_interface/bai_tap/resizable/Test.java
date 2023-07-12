@@ -22,22 +22,22 @@ public class Test {
             }
         }
         double random = Math.random() * 100 + 1;
-        for (Shape shape : shapes) {
-            System.out.println(shape);
-            if (shape instanceof Circle) {
-                ((Circle) shape).resize(random);
+        for (Shape x : shapes) {
+            System.out.println(x);
+            if (x instanceof Circle) {
+                x.resize(random);
                 System.out.println("Circle Area: ");
-                System.out.println(((Circle) shape).getArea());
+                System.out.println(((Circle) x).getArea());
             }
-            if (shape instanceof Rectangle) {
-                ((Rectangle) shape).resize(random);
+            if (x instanceof Rectangle) {
+                x.resize(random);
                 System.out.println("Rectangle Area: ");
-                System.out.println(((Rectangle) shape).getArea());
+                System.out.println(((Rectangle) x).getArea());
             }
-            if (shape instanceof Square) {
-                ((Square) shape).resize(random);
+            if (x instanceof Square) {
+                x.resize(random);
                 System.out.println("Square Area: ");
-                System.out.println(((Square) shape).getArea());
+                System.out.println(((Square) x).getArea());
             }
         }
     }
