@@ -1,15 +1,15 @@
 package mvc_practice.repository;
 
-import mvc_practice.model.Customer;
+import mvc_practice.model.Clients;
 
 import java.util.ArrayList;
 
 public interface IClientsRepository {
-    ArrayList<Customer> findAll();
+    ArrayList<Clients> findAll();
 
-    void addCustomer(Customer customer);
+    void addCustomer(Clients clients);
 
     void removeCustomerById(int id);
 
-    ArrayList<Customer> searchCustomerByName(String name);
+    ArrayList<Clients> searchCustomerByName(String name);
 }

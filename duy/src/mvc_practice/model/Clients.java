@@ -1,12 +1,12 @@
 package mvc_practice.model;
 
-public class Customer {
+public class Clients {
     private int id;
     private String name;
     private int age;
     private String typeCustomer;
 
-    public Customer(int id, String name, int age, String typeCustomer) {
+    public Clients(int id, String name, int age, String typeCustomer) {
         this.id = id;
         this.name = name;
         this.age = age;

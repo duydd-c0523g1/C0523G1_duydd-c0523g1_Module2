@@ -1,6 +1,6 @@
 package mvc_practice.service;
 
-import mvc_practice.model.Customer;
+import mvc_practice.model.Clients;
 import mvc_practice.repository.ClientsRepositoryImpl;
 import mvc_practice.repository.IClientsRepository;
 import mvc_practice.view.ClientsView;
@@ -12,8 +12,8 @@ public class ClientsServiceImpl implements IClientsService {
     private ClientsView clientsView = new ClientsView();
 
     @Override
-    public void addCustomer(Customer customer) {
-        clientsRepository.addCustomer(customer);
+    public void addCustomer(Clients clients) {
+        clientsRepository.addCustomer(clients);
     }
 
     @Override
@@ -22,7 +22,7 @@ public class ClientsServiceImpl implements IClientsService {
     }
 
     @Override
-    public ArrayList<Customer> searchCustomerByName(String name) {
+    public ArrayList<Clients> searchCustomerByName(String name) {
         return clientsRepository.searchCustomerByName(name);
     }
 
