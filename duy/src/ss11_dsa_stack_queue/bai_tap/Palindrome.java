@@ -17,16 +17,16 @@ public class Palindrome {
             charStack.push(c);
             charQueue.offer(c);
         }
-        boolean status = false;
+        boolean isPalindrome = false;
         for (int j = 0; j < charArray.length; j++) {
             if (charStack.pop() != charQueue.poll()) {
-                status = false;
+                isPalindrome = false;
                 break;
             } else {
-                status = true;
+                isPalindrome = true;
             }
         }
-        if (status) {
+        if (isPalindrome) {
             System.out.println("Chuỗi nhập vào là chuỗi Palindrome");
         }
         else {
