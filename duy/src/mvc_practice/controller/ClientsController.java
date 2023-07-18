@@ -6,10 +6,6 @@ import mvc_practice.service.IClientsService;
 
 import java.util.Scanner;
 
-/*
-Em biết là bài này phải tự làm nhưng mà có nhiều chỗ khó quá em vẫn phải Google ạ.
-Em sẽ note lại những khó khăn để hỏi anh sau ạ :((
-*/
 public class ClientsController {
     private static IClientsService clientsService = new ClientsServiceImpl();
 
