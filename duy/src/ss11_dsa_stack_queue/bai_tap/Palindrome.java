@@ -7,7 +7,7 @@ import java.util.Stack;
 
 public class Palindrome {
     public static void main(String[] args) {
-        String inputString = "Able was I ere I saw Elba";
+        String inputString = "AtB";
         String stringToCheck = inputString.toLowerCase();
         char[] charArray = stringToCheck.toCharArray();
         System.out.println(Arrays.toString(charArray));
@@ -30,7 +30,7 @@ public class Palindrome {
             System.out.println("Chuỗi nhập vào là chuỗi Palindrome");
         }
         else {
-            System.out.println("Chuỗi nhập vào là không phải là chuỗi Palindrome");
+            System.out.println("Chuỗi nhập vào không phải là chuỗi Palindrome");
         }
     }
 }
