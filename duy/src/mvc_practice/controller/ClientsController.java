@@ -44,8 +44,8 @@ public class ClientsController {
                     break;
                 case 3: //Xóa theo ID
                     System.out.println("Input customer's ID");
-                    id = scanner.nextInt();
-                    clientsService.removeCustomerById(id);
+                    int idToDelete = scanner.nextInt();
+                    clientsService.removeCustomerById(idToDelete);
                     clientsService.showCustomerList();
                     break;
                 case 4: // Tìm kiếm gần đúng
