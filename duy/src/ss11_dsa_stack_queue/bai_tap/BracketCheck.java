@@ -1,6 +1,5 @@
 package ss11_dsa_stack_queue.bai_tap;
 
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -11,7 +10,7 @@ public class BracketCheck {
         String equation = scanner.nextLine();
         char[] charArray = equation.toCharArray();
         for (char c : charArray) {
-            System.out.print(c + " ");
+            System.out.print(c);
         }
         Stack<Character> bStack = new Stack<>();
         for (char c : charArray) {
@@ -19,7 +18,7 @@ public class BracketCheck {
                 bStack.push(c);
             } else if (c == ')') {
                 if (bStack.empty()) {
-                    System.out.println("Not good");
+                    System.out.println(" Not good");
                     break;
                 }else {
                     bStack.pop();
@@ -27,9 +26,9 @@ public class BracketCheck {
             }
         }
         if (bStack.isEmpty()) {
-            System.out.println("Good");
+            System.out.println(" Good");
         }else {
-            System.out.println("Not good");
+            System.out.println(" Not good");
         }
     }
 }
