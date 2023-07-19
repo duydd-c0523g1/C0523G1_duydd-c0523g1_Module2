@@ -31,4 +31,3 @@ public class ClientsServiceImpl implements IClientsService {
         clientsView.displayCustomerList(clientsRepository.findAll());
     }
 }
-
