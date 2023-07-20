@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public interface IManagerRepository {
     ArrayList<Products> displayAll ();
-    void addProduct ();
+    void addProduct (Products products);
     void removeProductByID (int id);
     void updateProductByID (int id);
     void sortByAscendingPrice ();

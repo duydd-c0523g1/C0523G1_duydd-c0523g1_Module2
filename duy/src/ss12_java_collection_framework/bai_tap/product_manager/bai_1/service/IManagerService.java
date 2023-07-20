@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 public interface IManagerService {
     ArrayList<Products> displayAll ();
-    void addProduct ();
-    void removeProductByID ();
-    void updateProductByID ();
+    void addProduct (Products products);
+    void removeProductByID (int id);
+    void updateProductByID (int id);
     void sortByAscendingPrice ();
     void sorByDescendingPrice ();
-    ArrayList<Products> searchProductByName ();
+    ArrayList<Products> searchProductByName (String name);
 }

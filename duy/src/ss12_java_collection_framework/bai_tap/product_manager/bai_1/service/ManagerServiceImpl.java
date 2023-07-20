@@ -15,17 +15,17 @@ public class ManagerServiceImpl implements IManagerService {
     }
 
     @Override
-    public void addProduct() {
-        managerRepository.addProduct();
+    public void addProduct(Products products) {
+        managerRepository.addProduct(products);
     }
 
     @Override
-    public void removeProductByID() {
-
+    public void removeProductByID(int id) {
+        managerRepository.removeProductByID(id);
     }
 
     @Override
-    public void updateProductByID() {
+    public void updateProductByID(int id) {
 
     }
 
@@ -40,7 +40,7 @@ public class ManagerServiceImpl implements IManagerService {
     }
 
     @Override
-    public ArrayList<Products> searchProductByName() {
-        return null;
+    public ArrayList<Products> searchProductByName(String name) {
+        return managerRepository.searchProductByName(name);
     }
 }
