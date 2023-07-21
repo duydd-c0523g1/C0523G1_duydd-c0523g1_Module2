@@ -1,17 +1,17 @@
-package ss12_java_collection_framework.bai_tap.product_manager.bai_1.model;
+package ss12_java_collection_framework.bai_tap.product_manager.bai_1_redo.model;
 
-public class Products {
+public class Product {
     private int id;
-    private double price;
     private String name;
+    private int price;
 
-    public Products() {
+    public Product() {
     }
 
-    public Products(int id, double price, String name) {
+    public Product(int id, String name, int price) {
         this.id = id;
-        this.price = price;
         this.name = name;
+        this.price = price;
     }
 
     public int getId() {
@@ -22,14 +22,6 @@ public class Products {
         this.id = id;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public String getName() {
         return name;
     }
@@ -38,12 +30,20 @@ public class Products {
         this.name = name;
     }
 
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
     @Override
     public String toString() {
-        return "Products{" +
+        return "Product{" +
                 "id=" + id +
-                ", price=" + price +
                 ", name='" + name + '\'' +
+                ", price=" + price +
                 '}';
     }
 }
