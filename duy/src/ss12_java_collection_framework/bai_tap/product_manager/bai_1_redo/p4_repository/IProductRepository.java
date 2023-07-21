@@ -5,7 +5,7 @@ import ss12_java_collection_framework.bai_tap.product_manager.bai_1_redo.model.P
 import java.util.ArrayList;
 
 public interface IProductRepository {
-    void showProductList();
+    ArrayList<Product> showProductList();
     void addProduct(Product product);
     void removeProduct(int id);
     void searchProduct(String name);

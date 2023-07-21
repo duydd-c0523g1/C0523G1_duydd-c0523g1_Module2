@@ -4,15 +4,23 @@ import ss12_java_collection_framework.bai_tap.product_manager.bai_1_redo.model.P
 import ss12_java_collection_framework.bai_tap.product_manager.bai_1_redo.p4_repository.IProductRepository;
 import ss12_java_collection_framework.bai_tap.product_manager.bai_1_redo.p4_repository.ProductRepositoryImpl;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ProductServiceImpl implements IProductService {
     private static IProductRepository productRepository = new ProductRepositoryImpl();
-    Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
 
     @Override
     public void showProductList() {
-        productRepository.showProductList();
+       ArrayList<Product> productList = productRepository.showProductList();
+        if (productList.size() == 0) {
+            System.out.println("The list is empty");
+        } else {
+            for (int i = 0; i < productList.size(); i++) {
+                System.out.println(productList.get(i));
+            }
+        }
     }
 
     @Override
@@ -35,7 +43,7 @@ public class ProductServiceImpl implements IProductService {
         int id = Integer.parseInt(scanner.nextLine());
         productRepository.removeProduct(id);
         System.out.println("Updated list:");
-        productRepository.showProductList();
+        this.showProductList();
     }
 
     @Override

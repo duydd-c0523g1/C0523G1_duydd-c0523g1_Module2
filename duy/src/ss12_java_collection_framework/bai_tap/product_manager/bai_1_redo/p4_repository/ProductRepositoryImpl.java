@@ -5,17 +5,14 @@ import ss12_java_collection_framework.bai_tap.product_manager.bai_1_redo.model.P
 import java.util.ArrayList;
 
 public class ProductRepositoryImpl implements IProductRepository {
-    ArrayList<Product> productList = new ArrayList<>();
-
+    private static ArrayList<Product> productList = new ArrayList<>();
+     static {
+         productList.add(new Product());
+     }
     @Override
-    public void showProductList() {
-        if (productList.size() == 0) {
-            System.out.println("The list is empty");
-        } else {
-            for (int i = 0; i < productList.size(); i++) {
-                System.out.println(productList.get(i));
-            }
-        }
+    public ArrayList<Product> showProductList() {
+         // code đọc file
+      return productList;
     }
 
     @Override
