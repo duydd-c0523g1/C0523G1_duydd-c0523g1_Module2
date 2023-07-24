@@ -13,7 +13,7 @@ public class ReadCSVFile {
             System.out.println("Danh sách các quốc gia:");
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] countryData = line.split(","); // Phân tách thông tin quốc gia bằng dấu phẩy
+                String[] countryData = line.split(",");
                 int id = Integer.parseInt(countryData[0]);
                 String code = countryData[1];
                 String name = countryData[2];
