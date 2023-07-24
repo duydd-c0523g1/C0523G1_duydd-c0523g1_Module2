@@ -1,3 +1,5 @@
+package ss14_sorting_algorithm.bai_tap;
+
 public class BubbleSort {
     public static int[] sort(int[] arr) {
         boolean check = true;

@@ -1,3 +1,5 @@
+package ss14_sorting_algorithm.bai_tap;
+
 public class InsertionSort {
     public static void sort (int[] arr) {
         for (int i = 1; i < arr.length; i++) {
