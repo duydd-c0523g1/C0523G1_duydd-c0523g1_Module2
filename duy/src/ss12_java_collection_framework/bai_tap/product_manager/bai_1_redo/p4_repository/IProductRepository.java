@@ -10,5 +10,5 @@ public interface IProductRepository {
     void removeProduct(int id);
     void searchProduct(String name);
     void updateProduct(Product product);
-    void sortProduct();
+    ArrayList<Product> sortProduct();
 }

@@ -69,6 +69,9 @@ public class ProductServiceImpl implements IProductService {
 
     @Override
     public void sortProduct() {
-
+        ArrayList<Product> products = productRepository.sortProduct();
+        for (Product p : products) {
+            System.out.println(p);
+        }
     }
 }
