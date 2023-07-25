@@ -1,4 +1,4 @@
-package ss16_io_text_file.bai_tap;
+package ss16_io_text_file.bai_tap.file_copy;
 
 import java.io.*;
 
@@ -26,7 +26,7 @@ public class FileCopy {
             reader.close();
             writer.close();
             // Đếm số ký tự trong tệp nguồn
-            int charCount = countCharacters(sourceFile);
+            int charCount = FileCopyUtils.countCharacters(sourceFile);
             System.out.println("Số ký tự trong tệp nguồn: " + charCount);
             System.out.println("Sao chép tệp thành công.");
         } catch (FileNotFoundException ex) {
@@ -41,21 +41,6 @@ public class FileCopy {
                 System.out.println("Lỗi: Không thể đóng tệp.");
             }
         }
-    }
-
-    private static int countCharacters(String fileName) throws IOException {
-        BufferedReader reader = null;
-        int charCount = 0;
-        try {
-            reader = new BufferedReader(new FileReader(fileName));
-            int character;
-            while ((character = reader.read()) != -1) {
-                charCount++;
-            }
-        } finally {
-            if (reader != null) reader.close();
-        }
-        return charCount;
     }
 }
 
