@@ -5,8 +5,8 @@ import java.io.*;
 public class FileCopyProgram {
 
     public static void main(String[] args) {
-        String sourceFilePath = "path/to/source/file.txt";
-        String targetFilePath = "path/to/target/file.txt";
+        String sourceFilePath = null;
+        String targetFilePath = null;
         try {
             if (checkSourceFileExists(sourceFilePath) && !checkTargetFileExists(targetFilePath)) {
                 copyFile(sourceFilePath, targetFilePath);
