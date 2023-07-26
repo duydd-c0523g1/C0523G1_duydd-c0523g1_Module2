@@ -6,10 +6,10 @@ import java.io.IOException;
 
 public class ReadCSVFile {
     public static void main(String[] args) {
-        String filePath = "D:\\CodeGym\\Git\\C0523G1-duydd-co523g1_Module2\\duy\\src\\ss16_io_text_file\\bai_tap\\countries.csv";
+        final String FILE_PATH = "D:\\CodeGym\\Git\\C0523G1-duydd-co523g1_Module2\\duy\\src\\ss16_io_text_file\\bai_tap\\countries.csv";
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new FileReader(filePath));
+            reader = new BufferedReader(new FileReader(FILE_PATH));
             System.out.println("Danh sách các quốc gia:");
             String line;
             while ((line = reader.readLine()) != null) {
