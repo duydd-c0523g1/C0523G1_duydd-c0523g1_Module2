@@ -1,12 +1,27 @@
 package model.booking;
 
-import model.person.customer.Customer;
+public class Booking {
+    private String contractNumber;
+    private String bookingNumber;
+    private int prepaidFee;
+    private int totalFee;
+    public Booking() {
+    }
 
-import java.time.LocalDate;
+    public Booking(String contractNumber, String bookingNumber, int prepaidFee, int totalFee) {
+        this.contractNumber = contractNumber;
+        this.bookingNumber = bookingNumber;
+        this.prepaidFee = prepaidFee;
+        this.totalFee = totalFee;
+    }
 
-public class Booking extends Service {
-    private LocalDate bookingDate;
-    private LocalDate bookingDateStart;
-    private LocalDate bookingDateEnd;
-    private String customerID; //Cái này đã khai báo ở Class Customer rồi
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "contractNumber='" + contractNumber + '\'' +
+                ", bookingNumber='" + bookingNumber + '\'' +
+                ", prepaidFee=" + prepaidFee +
+                ", totalFee=" + totalFee +
+                '}';
+    }
 }
