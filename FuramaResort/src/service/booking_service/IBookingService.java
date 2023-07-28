@@ -1,8 +1,10 @@
 package service.booking_service;
 
-import service.CRUD;
-
-public interface IBookingService extends CRUD {
+public interface IBookingService {
 
     void creatNewContract();
+    void add();
+    void remove();
+    void update();
+    void display();
 }

@@ -1,15 +1,14 @@
 package service.booking_service;
 
-import service.CRUD;
-
 public class BookingServiceImpl implements IBookingService {
+
     @Override
-    public void displayList() {
+    public void add() {
 
     }
 
     @Override
-    public void addNew() {
+    public void remove() {
 
     }
 
@@ -19,7 +18,7 @@ public class BookingServiceImpl implements IBookingService {
     }
 
     @Override
-    public void delete() {
+    public void display() {
 
     }
 
