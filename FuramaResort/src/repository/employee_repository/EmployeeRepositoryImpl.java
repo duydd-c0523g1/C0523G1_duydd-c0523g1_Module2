@@ -1,4 +1,4 @@
 package repository.employee_repository;
 
-public class EmployeeRepositoryImpl {
+public class EmployeeRepositoryImpl implements IEmployeeRepository {
 }

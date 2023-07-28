@@ -1,4 +1,4 @@
 package repository.promotion_repository;
 
-public class PromotionRepositoryImpl {
+public class PromotionRepositoryImpl implements IPromotionRepository{
 }
