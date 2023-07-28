@@ -2,28 +2,24 @@ package service.booking_service;
 
 public class BookingServiceImpl implements IBookingService {
 
+
     @Override
-    public void add() {
+    public void addNewBooking() {
 
     }
 
     @Override
-    public void remove() {
+    public void displayListBooking() {
 
     }
 
     @Override
-    public void update() {
+    public void createNewContract() {
 
     }
 
     @Override
-    public void display() {
-
-    }
-
-    @Override
-    public void creatNewContract() {
+    public void displayListContract() {
 
     }
 }
