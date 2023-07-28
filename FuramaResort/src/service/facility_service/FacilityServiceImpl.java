@@ -1,7 +1,6 @@
-package service.booking_service;
+package service.facility_service;
 
-public class BookingServiceImpl implements IBookingService {
-
+public class FacilityServiceImpl implements IFacilityService {
     @Override
     public void displayList() {
 
@@ -22,14 +21,8 @@ public class BookingServiceImpl implements IBookingService {
 
     }
 
-    //Contract
     @Override
-    public void displayContractList() {
-
-    }
-
-    @Override
-    public void editContract() {
+    public void displayListFacilityMaintenance() {
 
     }
 }

@@ -1,9 +1,11 @@
 package service.booking_service;
 
-public interface IBookingService {
+import com.sun.deploy.services.Service;
+import service.IService;
 
-    void addNewBooking();
-    void displayListBooking();
-    void createNewContract();
-    void displayListContract();
+public interface IBookingService extends IService {
+
+    //Contract
+    void displayContractList();
+    void editContract();
 }
