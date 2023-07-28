@@ -12,7 +12,7 @@ public class BookingManagement {
             System.out.println("-------Booking Management-------");
             System.out.println("1. Display list bookings");
             System.out.println("2. Add new booking");
-            System.out.println("3. Create new contrat");
+            System.out.println("3. Create new contract");
             System.out.println("4. Display list contracts");
             System.out.println("5. Edit contract");
             System.out.println("6. Return to main menu");
