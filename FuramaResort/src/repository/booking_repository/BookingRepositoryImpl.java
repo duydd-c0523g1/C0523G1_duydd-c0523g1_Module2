@@ -1,25 +1,36 @@
 package repository.booking_repository;
 
+import model.booking.Booking;
+
 public class BookingRepositoryImpl implements IBookingRepository {
 
-
     @Override
-    public void addNewBooking() {
+    public void displayContractList() {
 
     }
 
     @Override
-    public void displayListBooking() {
+    public void editContract() {
 
     }
 
     @Override
-    public void createNewContract() {
+    public void displayList() {
 
     }
 
     @Override
-    public void displayListContract() {
+    public void addNew(Booking booking) {
+
+    }
+
+    @Override
+    public void edit(Booking booking) {
+
+    }
+
+    @Override
+    public void delete(int id) {
 
     }
 }
