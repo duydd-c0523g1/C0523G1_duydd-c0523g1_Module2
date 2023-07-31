@@ -1,10 +1,13 @@
 package controller.sub_menu;
 
 import controller.FuramaController;
+import service.employee_service.EmployeeServiceImpl;
+import service.employee_service.IEmployeeService;
 
 import java.util.Scanner;
 
 public class EmployeeManagement {
+    private static IEmployeeService employeeService = new EmployeeServiceImpl();
     public static void employeeManagement() {
         int selection;
         Scanner scanner = new Scanner(System.in);
@@ -20,6 +23,7 @@ public class EmployeeManagement {
             selection = Integer.parseInt(scanner.nextLine());
             switch (selection) {
                 case 1:
+                    employeeService.displayList();
                     break;
                 case 2:
                     break;

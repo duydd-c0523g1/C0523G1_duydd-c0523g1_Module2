@@ -1,14 +1,17 @@
 package repository.booking_repository;
 
 import model.booking.Booking;
+import model.person.employee.Employee;
 import repository.IRepository;
+
+import java.util.ArrayList;
 
 public interface IBookingRepository extends IRepository<Booking> {
     void displayContractList();
     void editContract();
 
     @Override
-    void displayList();
+    ArrayList<Employee> displayList();
 
     @Override
     void addNew(Booking booking);

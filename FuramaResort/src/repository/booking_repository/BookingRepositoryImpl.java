@@ -1,6 +1,9 @@
 package repository.booking_repository;
 
 import model.booking.Booking;
+import model.person.employee.Employee;
+
+import java.util.ArrayList;
 
 public class BookingRepositoryImpl implements IBookingRepository {
 
@@ -15,8 +18,9 @@ public class BookingRepositoryImpl implements IBookingRepository {
     }
 
     @Override
-    public void displayList() {
+    public ArrayList<Employee> displayList() {
 
+        return null;
     }
 
     @Override

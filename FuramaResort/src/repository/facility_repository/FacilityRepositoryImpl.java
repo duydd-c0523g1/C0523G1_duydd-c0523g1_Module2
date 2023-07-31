@@ -1,6 +1,9 @@
 package repository.facility_repository;
 
 import model.facility.Facility;
+import model.person.employee.Employee;
+
+import java.util.ArrayList;
 
 public class FacilityRepositoryImpl implements IFacilityRepository{
     @Override
@@ -9,8 +12,9 @@ public class FacilityRepositoryImpl implements IFacilityRepository{
     }
 
     @Override
-    public void displayList() {
+    public ArrayList<Employee> displayList() {
 
+        return null;
     }
 
     @Override

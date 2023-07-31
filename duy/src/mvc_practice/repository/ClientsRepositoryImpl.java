@@ -17,7 +17,7 @@ public class ClientsRepositoryImpl implements IClientsRepository {
         clientsList.add(clients);
     }
 
-    @Override
+    @Overrid2e
     public void removeCustomerById(int id) {
         clientsList.removeIf(customer -> customer.getId() == id);
     }

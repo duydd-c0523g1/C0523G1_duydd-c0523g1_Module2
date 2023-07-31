@@ -1,6 +1,9 @@
 package repository.customer_repository;
 
 import model.person.customer.Customer;
+import model.person.employee.Employee;
+
+import java.util.ArrayList;
 
 public class CustomerRepositoryImpl implements ICustomerRepository {
     @Override
@@ -9,8 +12,9 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
     }
 
     @Override
-    public void displayList() {
+    public ArrayList<Employee> displayList() {
 
+        return null;
     }
 
     @Override
