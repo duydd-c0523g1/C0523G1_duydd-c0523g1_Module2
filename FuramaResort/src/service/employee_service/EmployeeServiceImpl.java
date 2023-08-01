@@ -77,7 +77,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
         System.out.println("Nhập lương");
         int newSalary = Integer.parseInt(scanner.nextLine());
         Employee employee = new Employee(newName, newDob, newGender, newIdenNum, newPhoneNumber, newEmail, id, newEduLevel, newPosition, newSalary);
-        employeeRepository.edit(employee);
+        employeeRepository.edit(employee, id);
     }
 
     @Override

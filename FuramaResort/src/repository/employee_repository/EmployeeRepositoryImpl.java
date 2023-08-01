@@ -51,6 +51,23 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
 
     @Override
     public void edit(Employee employee) {
+        List<Employee> employeeList = this.displayList();
+        ArrayList<String> stringList = new ArrayList<>();
+        for (Employee e : employeeList) {
+            if (e.getEmployeeID().equals(employee.getEmployeeID())) {
+                e.setName(employee.getName());
+                e.setDob(employee.getDob());
+                e.setEmployeeID(employee.getEmployeeID());
+                e.setGender(employee.getGender());
+                e.setPhoneNumber(employee.getPhoneNumber());
+                e.setEducationLevel(employee.getEducationLevel());
+                e.setJobPosition(employee.getJobPosition());
+                e.setSalary(employee.getSalary());
+                stringList.add(String.valueOf(e));
+                Stream.write(FILE_PATH, stringList, false);
+            }
+            break;
+        }
     }
     @Override
     public void delete(int id) {
