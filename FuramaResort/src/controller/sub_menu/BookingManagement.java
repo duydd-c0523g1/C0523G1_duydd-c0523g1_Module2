@@ -1,10 +1,14 @@
 package controller.sub_menu;
 
 import controller.FuramaController;
+import repository.booking_repository.IBookingRepository;
+import service.booking_service.BookingServiceImpl;
+import service.booking_service.IBookingService;
 
 import java.util.Scanner;
 
 public class BookingManagement {
+    private static IBookingService bookingService = new BookingServiceImpl();
     public static void bookingManagement() {
         int selection;
         Scanner scanner = new Scanner(System.in);

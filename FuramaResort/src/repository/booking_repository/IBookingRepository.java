@@ -11,7 +11,7 @@ public interface IBookingRepository extends IRepository<Booking> {
     void editContract();
 
     @Override
-    ArrayList<Employee> displayList();
+    ArrayList<Booking> displayList();
 
     @Override
     void addNew(Booking booking);
