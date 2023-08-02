@@ -1,10 +1,13 @@
 package controller.sub_menu;
 
 import controller.FuramaController;
+import service.customer_service.CustomerServiceImpl;
+import service.customer_service.ICustomerService;
 
 import java.util.Scanner;
 
 public class CustomerManagement {
+    private static ICustomerService customerService = new CustomerServiceImpl();
     public static void customerManagement() {
         int selection;
         Scanner scanner = new Scanner(System.in);
@@ -20,14 +23,19 @@ public class CustomerManagement {
             selection = Integer.parseInt(scanner.nextLine());
             switch (selection) {
                 case 1:
+                    customerService.displayList();
                     break;
                 case 2:
+                    customerService.addNew();
                     break;
                 case 3:
+                    customerService.edit();
                     break;
                 case 4:
+                    customerService.delete();
                     break;
                 case 5:
+                    customerService.searchByName();
                     break;
                 case 6:
                     FuramaController.displayMainMenu();
