@@ -2,7 +2,7 @@ package model.facility;
 
 
 public abstract class Facility {
-    private int serviceId;
+    private String serviceId;
     private String serviceName;
     private double serviceUsageArea;
     private double rentalFee;
@@ -12,7 +12,7 @@ public abstract class Facility {
     public Facility() {
     }
 
-    public Facility(int serviceId, String serviceName, double serviceUsageArea, double rentalFee, int maximumCustomerAmount, String rentalType) {
+    public Facility(String serviceId, String serviceName, double serviceUsageArea, double rentalFee, int maximumCustomerAmount, String rentalType) {
         this.serviceId = serviceId;
         this.serviceName = serviceName;
         this.serviceUsageArea = serviceUsageArea;
@@ -21,11 +21,11 @@ public abstract class Facility {
         this.rentalType = rentalType;
     }
 
-    public int getServiceId() {
+    public String getServiceId() {
         return serviceId;
     }
 
-    public void setServiceId(int serviceId) {
+    public void setServiceId(String serviceId) {
         this.serviceId = serviceId;
     }
 

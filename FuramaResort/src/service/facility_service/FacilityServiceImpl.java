@@ -1,5 +1,7 @@
 package service.facility_service;
 
+import controller.sub_menu.FacilityManagementSubMenu;
+
 public class FacilityServiceImpl implements IFacilityService {
     @Override
     public void displayList() {
@@ -8,7 +10,7 @@ public class FacilityServiceImpl implements IFacilityService {
 
     @Override
     public void addNew() {
-
+        FacilityManagementSubMenu.facilitySubMenu();
     }
 
     @Override
