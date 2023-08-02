@@ -9,7 +9,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class EmployeeRepositoryImpl implements IEmployeeRepository {
-    private final String FILE_PATH = "D:\\CodeGym\\Git\\C0523G1-duydd-co523g1_Module2\\FuramaResort\\src\\data\\Employee.csv";
+    private final String FILE_PATH = "D:\\CodeGym\\Git\\C0523G1-duydd-co523g1_Module2\\FuramaResort\\src\\data\\employee.csv";
     Scanner scanner =new Scanner(System.in);
     @Override
     public List<Employee> searchByName(String name) {
