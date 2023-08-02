@@ -50,14 +50,17 @@ public class Employee extends Person {
     public void setSalary(int salary) {
         this.salary = salary;
     }
+    public String getInfoToCSV() {
+        return this.getName() + "," + this.getDob() + "," + this.getGender() + "," + this.getIdentificationNumber() + "," + this.getPhoneNumber() + "," + this.getEmail() + "," + this.employeeID + "," + this.employeeID + "," + this.educationLevel + "," + this.jobPosition + "," + this.salary;
+    }
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "employeeID='" + employeeID + '\'' +
-                ", educationLevel='" + educationLevel + '\'' +
-                ", jobPosition='" + jobPosition + '\'' +
-                ", salary=" + salary +
-                '}';
+        return super.toString()+
+                "\n Mã nhân viên: " + employeeID +
+                "\n Trình độ học vấn: " + educationLevel +
+                "\n Chức vụ: " + jobPosition +
+                "\n Lương: " + salary;
     }
 }
+

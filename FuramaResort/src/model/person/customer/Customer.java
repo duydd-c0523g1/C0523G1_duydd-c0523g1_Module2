@@ -40,6 +40,11 @@ public class Customer extends Person {
     public void setCustomerAddress(String customerAddress) {
         this.customerAddress = customerAddress;
     }
+    public String getInfoToCSV() {
+        return this.getName() + "," + this.getDob() + "," + this.getGender() + ","
+                + this.getIdentificationNumber() + "," + this.getPhoneNumber() + "," + this.getEmail() + ","
+                + this.customerID + "," + this.customerType + "," + this.customerAddress;
+    }
 
     @Override
     public String toString() {

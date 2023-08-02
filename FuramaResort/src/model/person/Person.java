@@ -68,15 +68,15 @@ public abstract class Person {
         this.email = email;
     }
 
+
+
     @Override
     public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", dob='" + dob + '\'' +
-                ", gender='" + gender + '\'' +
-                ", identificationNumber='" + identificationNumber + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        return " Tên: " + name +
+                "\n Ngày sinh: " + dob +
+                "\n Giới tính: " + gender +
+                "\n CMND/CCCD số: " + identificationNumber +
+                "\n Số điện thoại: " + phoneNumber +
+                "\n Email: " + email;
     }
 }

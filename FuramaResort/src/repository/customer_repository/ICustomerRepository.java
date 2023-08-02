@@ -5,19 +5,15 @@ import model.person.employee.Employee;
 import repository.IRepository;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface ICustomerRepository extends IRepository<Customer> {
-    void searchByName(String name);
+    List<Customer> searchByName(String name);
 
     @Override
-    ArrayList<Employee> displayList();
+    ArrayList<Customer> displayList();
 
     @Override
     void addNew(Customer customer);
 
-    @Override
-    void edit(Customer customer);
-
-    @Override
-    void delete(int id);
 }

@@ -16,6 +16,8 @@ public interface IEmployeeRepository extends IRepository<Employee> {
     void addNew(Employee employee);
 
 
+    void edit(String id);
+
     @Override
     void delete(int id);
 }

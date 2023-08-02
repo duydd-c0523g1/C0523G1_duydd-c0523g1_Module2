@@ -26,10 +26,13 @@ public class EmployeeManagement {
                     employeeService.displayList();
                     break;
                 case 2:
+                    employeeService.addNew();
                     break;
                 case 3:
+                    employeeService.edit();
                     break;
                 case 4:
+                    employeeService.delete();
                     break;
                 case 5:
                     break;
