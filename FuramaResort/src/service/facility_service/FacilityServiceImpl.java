@@ -12,6 +12,15 @@ public class FacilityServiceImpl implements IFacilityService {
     public void addNew() {
         FacilityManagementSubMenu.facilitySubMenu();
     }
+    @Override
+    public void addNewVilla() {
+    }
+    @Override
+    public void addNewHouse() {
+    }
+    @Override
+    public void addNewRoom() {
+    }
 
     @Override
     public void edit() {
