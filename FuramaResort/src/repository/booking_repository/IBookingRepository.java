@@ -6,19 +6,7 @@ import repository.IRepository;
 
 import java.util.ArrayList;
 
-public interface IBookingRepository extends IRepository<Booking> {
-    void displayContractList();
-    void editContract();
-
-    @Override
+public interface IBookingRepository {
     ArrayList<Booking> displayList();
-
-    @Override
     void addNew(Booking booking);
-
-    @Override
-    void edit(Booking booking);
-
-    @Override
-    void delete(int id);
 }

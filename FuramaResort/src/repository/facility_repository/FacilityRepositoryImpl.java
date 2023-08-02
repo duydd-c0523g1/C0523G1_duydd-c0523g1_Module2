@@ -6,14 +6,9 @@ import model.person.employee.Employee;
 import java.util.ArrayList;
 
 public class FacilityRepositoryImpl implements IFacilityRepository{
-    @Override
-    public void displayListFacilityMaintenance() {
-
-    }
 
     @Override
-    public ArrayList<Employee> displayList() {
-
+    public ArrayList<Facility> displayList() {
         return null;
     }
 
@@ -23,12 +18,17 @@ public class FacilityRepositoryImpl implements IFacilityRepository{
     }
 
     @Override
-    public void edit(Facility facility) {
+    public void edit(String id, Facility facility) {
 
     }
 
     @Override
     public void delete(int id) {
+
+    }
+
+    @Override
+    public void displayListFacilityMaintenance() {
 
     }
 }

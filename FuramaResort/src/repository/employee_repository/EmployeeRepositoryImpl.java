@@ -12,7 +12,6 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
     private final String FILE_PATH = "D:\\CodeGym\\Git\\C0523G1-duydd-co523g1_Module2\\FuramaResort\\src\\data\\Employee.csv";
     Scanner scanner =new Scanner(System.in);
     @Override
-
     public List<Employee> searchByName(String name) {
         ArrayList<Employee> employeeList = this.displayList();
         List<Employee> employeeSearchList = new ArrayList<>();
@@ -51,11 +50,7 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
     }
 
     @Override
-    public void edit(Employee employee) {
-    }
-
-    @Override
-    public void edit(String id) {
+    public void edit(String id,Employee employee) {
         ArrayList<Employee> employeeList = this.displayList();
         ArrayList<String> stringList = new ArrayList<>();
         for (Employee e : employeeList) {
@@ -113,8 +108,4 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
         displayList();
     }
 
-    @Override
-    public void delete(String id) {
-
-    }
 }

@@ -9,11 +9,4 @@ import java.util.List;
 
 public interface ICustomerRepository extends IRepository<Customer> {
     List<Customer> searchByName(String name);
-
-    @Override
-    ArrayList<Customer> displayList();
-
-    @Override
-    void addNew(Customer customer);
-
 }

@@ -50,50 +50,20 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
         }
         Stream.write(FILE_PATH, stringList, true);
     }
-
     @Override
-    public void edit(Customer customer) {
-
-    }
-
-    @Override
-    public void delete(String id) {
-
-    }
-
-    @Override
-    public void edit(String id) {
+    public void edit(String id,Customer customerEdit) {
         ArrayList<Customer> customerList = this.displayList();
         ArrayList<String> stringList = new ArrayList<>();
         for (Customer c : customerList) {
             if (c.getCustomerID().equals(id)) {
-                System.out.println("Nhập tên khách hàng");
-                String newName = scanner.nextLine();
-                System.out.println("Nhập ngày sinh khách hàng");
-                String newDob = scanner.nextLine();
-                System.out.println("Nhập giới tính khách hàng");
-                String newGender = scanner.nextLine();
-                System.out.println("Nhập số CMND/CCCD khách hàng");
-                String newCustomerIdentificationNumber = scanner.nextLine();
-                System.out.println("Nhập số điện thoại khách hàng");
-                String newPhoneNumber = scanner.nextLine();
-                System.out.println("Nhập Email khách hàng");
-                String newEmail = scanner.nextLine();
-                System.out.println("Nhập ID Khách hàng");
-                String newId = scanner.nextLine();
-                System.out.println("Nhập loại khách hàng");
-                String newType = scanner.nextLine();
-                System.out.println("Nhập địa chỉ khách hàng");
-                String newAddress = scanner.nextLine();
-                c.setName(newName);
-                c.setDob(newDob);
-                c.setGender(newGender);
-                c.setIdentificationNumber(newCustomerIdentificationNumber);
-                c.setPhoneNumber(newPhoneNumber);
-                c.setEmail(newEmail);
-                c.setCustomerID(newId);
-                c.setCustomerType(newType);
-                c.setCustomerAddress(newAddress);
+                c.setName(customerEdit.getName());
+                c.setDob(customerEdit.getDob());
+                c.setGender(customerEdit.getGender());
+                c.setIdentificationNumber(customerEdit.getIdentificationNumber());
+                c.setPhoneNumber(customerEdit.getPhoneNumber());
+                c.setEmail(customerEdit.getEmail());
+                c.setCustomerType(customerEdit.getCustomerType());
+                c.setCustomerAddress(customerEdit.getCustomerAddress());
             }
             stringList.add(c.getInfoToCSV());
         }

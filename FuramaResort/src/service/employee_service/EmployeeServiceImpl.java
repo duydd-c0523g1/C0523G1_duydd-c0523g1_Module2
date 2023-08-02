@@ -48,7 +48,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
     public void edit() {
         System.out.println("Nhập ID");
         String id = scanner.nextLine();
-        employeeRepository.edit(id);
+//        employeeRepository.edit(id);
     }
 
     @Override

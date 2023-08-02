@@ -35,6 +35,7 @@ public class EmployeeManagement {
                     employeeService.delete();
                     break;
                 case 5:
+                    employeeService.searchByName();
                     break;
                 case 6:
                     FuramaController.displayMainMenu();

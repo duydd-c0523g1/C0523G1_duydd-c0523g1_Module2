@@ -11,7 +11,9 @@ public class Employee extends Person {
     public Employee() {
     }
 
-    public Employee(String name, String dob, String gender, String identificationNumber, String phoneNumber, String email, String employeeID, String educationLevel, String jobPosition, int salary) {
+    public Employee(String name, String dob, String gender, String identificationNumber,
+                    String phoneNumber, String email, String employeeID, String educationLevel,
+                    String jobPosition, int salary) {
         super(name, dob, gender, identificationNumber, phoneNumber, email);
         this.employeeID = employeeID;
         this.educationLevel = educationLevel;
@@ -51,7 +53,12 @@ public class Employee extends Person {
         this.salary = salary;
     }
     public String getInfoToCSV() {
-        return this.getName() + "," + this.getDob() + "," + this.getGender() + "," + this.getIdentificationNumber() + "," + this.getPhoneNumber() + "," + this.getEmail() + "," + this.employeeID + "," + this.employeeID + "," + this.educationLevel + "," + this.jobPosition + "," + this.salary;
+//        String name, String dob, String gender, String identificationNumber, String phoneNumber, String email, String employeeID, String educationLevel, String jobPosition, int salary
+        return this.getName() + "," + this.getDob() +
+                "," + this.getGender() + "," + this.getIdentificationNumber() +
+                "," + this.getPhoneNumber() + "," + this.getEmail() +
+                "," + this.employeeID + "," + "," + this.educationLevel +
+                "," + this.jobPosition + "," + this.salary;
     }
 
     @Override
