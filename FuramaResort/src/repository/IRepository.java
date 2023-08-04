@@ -8,6 +8,6 @@ public interface IRepository<T> {
     ArrayList<T> displayList();
     void addNew(T t);
     void edit(String id, T t);
-    void delete(int id);
+    void delete(String id);
 
 }

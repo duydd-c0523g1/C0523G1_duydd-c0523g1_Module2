@@ -1,8 +1,8 @@
 package controller.sub_menu;
 
 import controller.FuramaController;
-import service.customer_service.CustomerServiceImpl;
-import service.customer_service.ICustomerService;
+import service.customer.CustomerServiceImpl;
+import service.customer.ICustomerService;
 
 import java.util.Scanner;
 

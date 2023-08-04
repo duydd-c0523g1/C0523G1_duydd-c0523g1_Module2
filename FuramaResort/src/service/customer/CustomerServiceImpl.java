@@ -1,8 +1,8 @@
-package service.customer_service;
+package service.customer;
 
 import model.person.customer.Customer;
-import repository.customer_repository.CustomerRepositoryImpl;
-import repository.customer_repository.ICustomerRepository;
+import repository.customer.CustomerRepositoryImpl;
+import repository.customer.ICustomerRepository;
 
 import java.util.List;
 import java.util.Scanner;
@@ -72,13 +72,12 @@ public class CustomerServiceImpl implements ICustomerService {
                 break;
             }
         }
-
     }
 
     @Override
     public void delete() {
         System.out.println("Nhập ID khách hàng");
-        int id = Integer.parseInt(scanner.nextLine());
+        String id = scanner.nextLine();
         customerRepository.delete(id);
     }
 

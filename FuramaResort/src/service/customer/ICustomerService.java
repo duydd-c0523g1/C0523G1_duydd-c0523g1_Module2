@@ -1,4 +1,4 @@
-package service.customer_service;
+package service.customer;
 
 import service.IService;
 

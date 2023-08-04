@@ -27,6 +27,7 @@ public class Stream {
             }
         }
     }
+
     public static List<String> read(String filePath) {
         File file = new File(filePath);
         FileReader fileReader = null;
@@ -43,8 +44,7 @@ public class Stream {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }
-        finally {
+        } finally {
             try {
                 bufferedReader.close();
                 fileReader.close();

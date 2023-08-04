@@ -1,6 +1,6 @@
-package service.promotion_service;
+package repository.promotion;
 
-public class PromotionService implements IPromotionService{
+public class PromotionRepositoryImpl implements IPromotionRepository{
     @Override
     public void displayListCustomersUseService() {
 

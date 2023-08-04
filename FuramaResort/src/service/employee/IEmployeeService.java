@@ -1,4 +1,4 @@
-package service.employee_service;
+package service.employee;
 
 import service.IService;
 

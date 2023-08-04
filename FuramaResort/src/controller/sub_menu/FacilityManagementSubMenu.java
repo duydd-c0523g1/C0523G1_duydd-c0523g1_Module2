@@ -1,8 +1,7 @@
 package controller.sub_menu;
 
-import controller.FuramaController;
-import service.facility_service.FacilityServiceImpl;
-import service.facility_service.IFacilityService;
+import service.facility.FacilityServiceImpl;
+import service.facility.IFacilityService;
 
 import java.util.Scanner;
 

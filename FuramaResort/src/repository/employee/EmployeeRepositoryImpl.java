@@ -1,4 +1,4 @@
-package repository.employee_repository;
+package repository.employee;
 
 import model.person.employee.Employee;
 import utils.Stream;
@@ -18,8 +18,6 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
         for (int i = 0; i < employeeList.size(); i++) {
             if (Objects.equals(employeeList.get(i).getName(), name)) {
                 employeeSearchList.add(employeeList.get(i));
-            } else {
-                System.out.println("Nhân viên không tồn tại");
             }
         }
         return employeeSearchList;
@@ -32,7 +30,8 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
         String[] array = null;
         for (String s : stringList) {
             array = s.split(",");
-            Employee employee = new Employee(array[0], array[1], array[2], array[3], array[4], array[5], array[6], array[7], array[8], Integer.parseInt(array[9]));
+            Employee employee = new Employee(array[0], array[1], array[2], array[3], array[4],
+                    array[5], array[6], array[7], array[8], Integer.parseInt(array[9]));
             employeeList.add(employee);
         }
         return employeeList;
@@ -50,41 +49,21 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
     }
 
     @Override
-    public void edit(String id,Employee employee) {
+    public void edit(String id,Employee employeeEdit) {
         ArrayList<Employee> employeeList = this.displayList();
         ArrayList<String> stringList = new ArrayList<>();
         for (Employee e : employeeList) {
             if (e.getEmployeeID().equals(id)) {
-                System.out.println("Nhập tên nhân viên");
-                String newName = scanner.nextLine();
-                System.out.println("Nhập ID nhân viên");
-                String newID = scanner.nextLine();
-                System.out.println("Nhập ngày sinh (DD/MM/YYY)");
-                String newDob = scanner.nextLine();
-                System.out.println("Nhập giới tính");
-                String newGender = scanner.nextLine();
-                System.out.println("Nhập số CCCD");
-                String newIdenNum = scanner.nextLine();
-                System.out.println("Nhập số điện thoại");
-                String newPhoneNumber = scanner.nextLine();
-                System.out.println("Nhập Email");
-                String newEmail = scanner.nextLine();
-                System.out.println("Nhập trình độ học vấn");
-                String newEduLevel = scanner.nextLine();
-                System.out.println("Nhập chức vụ");
-                String newPosition = scanner.nextLine();
-                System.out.println("Nhập lương");
-                int newSalary = Integer.parseInt(scanner.nextLine());
-                e.setName(newName);
-                e.setEmployeeID(newID);
-                e.setDob(newDob);
-                e.setGender(newGender);
-                e.setIdentificationNumber(newIdenNum);
-                e.setPhoneNumber(newPhoneNumber);
-                e.setEmail(newEmail);
-                e.setEducationLevel(newEduLevel);
-                e.setJobPosition(newPosition);
-                e.setSalary(newSalary);
+                e.setName(employeeEdit.getName());
+                e.setEmployeeID(employeeEdit.getEmployeeID());
+                e.setDob(employeeEdit.getDob());
+                e.setGender(employeeEdit.getGender());
+                e.setIdentificationNumber(employeeEdit.getIdentificationNumber());
+                e.setPhoneNumber(employeeEdit.getPhoneNumber());
+                e.setEmail(employeeEdit.getEmail());
+                e.setEducationLevel(employeeEdit.getEducationLevel());
+                e.setJobPosition(employeeEdit.getJobPosition());
+                e.setSalary(employeeEdit.getSalary());
             }
             stringList.add(e.getInfoToCSV());
         }
@@ -92,20 +71,19 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(String id) {
         ArrayList<Employee> employeeList = this.displayList();
         ArrayList<String> stringList = new ArrayList<>();
         for (int i = 0; i < employeeList.size(); i++) {
-            if (Integer.parseInt(employeeList.get(i).getEmployeeID()) == id) {
-                employeeList.remove(employeeList.get(i));
-            } else {
-                System.out.println("ID không tồn tại");
+            if (employeeList.get(i).getEmployeeID().equals(id)) {
+                employeeList.remove(i);
                 break;
             }
-            stringList.add(employeeList.get(i).getInfoToCSV());
+        }
+        for (Employee employee: employeeList) {
+            stringList.add(employee.getInfoToCSV());
         }
         Stream.write(FILE_PATH, stringList, false);
         displayList();
     }
-
 }

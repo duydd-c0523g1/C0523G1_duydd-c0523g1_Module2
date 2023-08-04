@@ -1,6 +1,5 @@
-package service.booking_service;
+package service.booking;
 
-import com.sun.deploy.services.Service;
 import service.IService;
 
 public interface IBookingService extends IService {

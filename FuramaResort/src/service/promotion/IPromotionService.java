@@ -1,4 +1,4 @@
-package service.promotion_service;
+package service.promotion;
 
 public interface IPromotionService {
     void displayListCustomersUseService();

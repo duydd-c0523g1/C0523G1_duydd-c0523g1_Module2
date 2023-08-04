@@ -1,8 +1,8 @@
 package controller.sub_menu;
 
 import controller.FuramaController;
-import service.employee_service.EmployeeServiceImpl;
-import service.employee_service.IEmployeeService;
+import service.employee.EmployeeServiceImpl;
+import service.employee.IEmployeeService;
 
 import java.util.Scanner;
 

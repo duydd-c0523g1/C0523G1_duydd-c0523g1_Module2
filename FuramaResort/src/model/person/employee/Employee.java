@@ -57,7 +57,7 @@ public class Employee extends Person {
         return this.getName() + "," + this.getDob() +
                 "," + this.getGender() + "," + this.getIdentificationNumber() +
                 "," + this.getPhoneNumber() + "," + this.getEmail() +
-                "," + this.employeeID + "," + "," + this.educationLevel +
+                "," + this.employeeID + "," + this.educationLevel +
                 "," + this.jobPosition + "," + this.salary;
     }
 

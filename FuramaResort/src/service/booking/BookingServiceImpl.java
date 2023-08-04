@@ -1,12 +1,10 @@
-package service.booking_service;
+package service.booking;
 
 import model.booking.Booking;
-import repository.booking_repository.BookingRepositoryImpl;
-import repository.booking_repository.IBookingRepository;
+import repository.booking.BookingRepositoryImpl;
+import repository.booking.IBookingRepository;
 
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class BookingServiceImpl implements IBookingService {

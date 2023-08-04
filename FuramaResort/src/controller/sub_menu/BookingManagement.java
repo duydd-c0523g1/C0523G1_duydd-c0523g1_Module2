@@ -1,9 +1,8 @@
 package controller.sub_menu;
 
 import controller.FuramaController;
-import repository.booking_repository.IBookingRepository;
-import service.booking_service.BookingServiceImpl;
-import service.booking_service.IBookingService;
+import service.booking.BookingServiceImpl;
+import service.booking.IBookingService;
 
 import java.util.Scanner;
 

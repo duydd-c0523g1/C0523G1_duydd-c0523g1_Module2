@@ -1,10 +1,9 @@
-package repository.facility_repository;
+package repository.facility;
 
 import model.facility.Facility;
 import model.facility.House;
 import model.facility.Room;
 import model.facility.Villa;
-import model.person.employee.Employee;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -14,7 +13,6 @@ public class FacilityRepositoryImpl implements IFacilityRepository {
     private static final Map<Facility, Integer> facilityMap = new LinkedHashMap<>();
 
     static {
-        // Thêm dữ liệu ban đầu vào facilityMap nếu cần
         Facility villa1 = new Villa("SVVL-0001", "Luxury Villa 1", 300, 5000000, 6, "DAY", "Deluxe", 80, 2);
         Facility villa2 = new Villa("SVVL-0002", "Beach Villa 2", 250, 4000000, 6, "DAY", "Superior", 60, 2);
         Facility house1 = new House("SVHO-0001", "City House 1", 90, 2000000, 4, "DAY", "Standard", 2);
@@ -45,7 +43,7 @@ public class FacilityRepositoryImpl implements IFacilityRepository {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(String id) {
 
     }
 

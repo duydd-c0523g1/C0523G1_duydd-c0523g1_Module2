@@ -1,8 +1,6 @@
-package repository.booking_repository;
+package repository.booking;
 
 import model.booking.Booking;
-import model.person.customer.Customer;
-import model.person.employee.Employee;
 import utils.Stream;
 
 import java.util.ArrayList;

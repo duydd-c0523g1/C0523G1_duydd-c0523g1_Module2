@@ -1,4 +1,4 @@
-package service.facility_service;
+package service.facility;
 
 import controller.sub_menu.FacilityManagementSubMenu;
 

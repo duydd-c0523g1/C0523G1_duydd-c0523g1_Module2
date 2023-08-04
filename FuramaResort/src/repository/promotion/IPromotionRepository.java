@@ -1,4 +1,4 @@
-package repository.promotion_repository;
+package repository.promotion;
 
 public interface IPromotionRepository {
     void displayListCustomersUseService();

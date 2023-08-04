@@ -1,10 +1,10 @@
-package service.facility_service;
+package service.facility;
 
 import service.IService;
 
 public interface IFacilityService extends IService {
     void displayListFacilityMaintenance();
     void addNewVilla();
-    public void addNewHouse();
-    public void addNewRoom();
+    void addNewHouse();
+    void addNewRoom();
 }

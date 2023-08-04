@@ -1,7 +1,6 @@
-package repository.customer_repository;
+package repository.customer;
 
 import model.person.customer.Customer;
-import model.person.employee.Employee;
 import utils.Stream;
 
 import java.util.ArrayList;
@@ -10,7 +9,7 @@ import java.util.Objects;
 import java.util.Scanner;
 
 public class CustomerRepositoryImpl implements ICustomerRepository {
-    private static String FILE_PATH = "D:\\CodeGym\\Git\\C0523G1-duydd-co523g1_Module2\\FuramaResort\\src\\data\\customer.csv";
+    private static final String FILE_PATH = "D:\\CodeGym\\Git\\C0523G1-duydd-co523g1_Module2\\FuramaResort\\src\\data\\customer.csv";
     Scanner scanner = new Scanner(System.in);
 
     @Override
@@ -50,8 +49,9 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
         }
         Stream.write(FILE_PATH, stringList, true);
     }
+
     @Override
-    public void edit(String id,Customer customerEdit) {
+    public void edit(String id, Customer customerEdit) {
         ArrayList<Customer> customerList = this.displayList();
         ArrayList<String> stringList = new ArrayList<>();
         for (Customer c : customerList) {
@@ -71,18 +71,19 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(String id) {
         ArrayList<Customer> customerList = this.displayList();
         ArrayList<String> stringList = new ArrayList<>();
         for (int i = 0; i < customerList.size(); i++) {
-            if (Integer.parseInt(customerList.get(i).getCustomerID()) == id) {
-                customerList.remove(customerList.get(i));
-            } else {
-                System.out.println("ID không tồn tại");
+            if (customerList.get(i).getCustomerID().equals(id)) {
+                customerList.remove(i);
                 break;
             }
-            stringList.add(customerList.get(i).getInfoToCSV());
+        }
+        for (Customer customer : customerList) {
+            stringList.add(customer.getInfoToCSV());
         }
         Stream.write(FILE_PATH, stringList, false);
+        displayList();
     }
 }
