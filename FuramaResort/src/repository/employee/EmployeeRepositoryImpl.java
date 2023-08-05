@@ -11,7 +11,7 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
     Scanner scanner =new Scanner(System.in);
     @Override
     public List<Employee> searchByName(String name) {
-        ArrayList<Employee> employeeList = this.displayList();
+        ArrayList<Employee> employeeList = (ArrayList<Employee>) this.displayList();
         List<Employee> employeeSearchList = new ArrayList<>();
         for (int i = 0; i < employeeList.size(); i++) {
             if (Objects.equals(employeeList.get(i).getName(), name)) {
