@@ -32,7 +32,7 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
                     array[5], array[6], array[7], array[8], Integer.parseInt(array[9]));
             employeeList.add(employee);
         }
-        return employeeList;
+        return (Map<Facility, Integer>) employeeList;
     }
 
     @Override

@@ -50,7 +50,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
 
     @Override
     public void edit(String id, Customer customerEdit) {
-        ArrayList<Customer> customerList = this.displayList();
+        ArrayList<Customer> customerList = (ArrayList<Customer>) this.displayList();
         ArrayList<String> stringList = new ArrayList<>();
         for (Customer c : customerList) {
             if (c.getCustomerID().equals(id)) {
@@ -70,7 +70,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
 
     @Override
     public void delete(String id) {
-        ArrayList<Customer> customerList = this.displayList();
+        ArrayList<Customer> customerList = (ArrayList<Customer>) this.displayList();
         ArrayList<String> stringList = new ArrayList<>();
         for (int i = 0; i < customerList.size(); i++) {
             if (customerList.get(i).getCustomerID().equals(id)) {
