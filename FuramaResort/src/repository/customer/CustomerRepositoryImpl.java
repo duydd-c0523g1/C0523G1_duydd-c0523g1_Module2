@@ -12,7 +12,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
 
     @Override
     public List<Customer> searchByName(String name) {
-        ArrayList<Customer> customerList = this.displayList();
+        ArrayList<Customer> customerList = (ArrayList<Customer>) this.displayList();
         List<Customer> customerSearchList = new ArrayList<>();
         for (int i = 0; i < customerList.size(); i++) {
             if (Objects.equals(customerList.get(i).getName(), name)) {

@@ -48,7 +48,7 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
 
     @Override
     public void edit(String id,Employee employeeEdit) {
-        ArrayList<Employee> employeeList = this.displayList();
+        ArrayList<Employee> employeeList = (ArrayList<Employee>) this.displayList();
         ArrayList<String> stringList = new ArrayList<>();
         for (Employee e : employeeList) {
             if (e.getEmployeeID().equals(id)) {
@@ -70,7 +70,7 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
 
     @Override
     public void delete(String id) {
-        ArrayList<Employee> employeeList = this.displayList();
+        ArrayList<Employee> employeeList = (ArrayList<Employee>) this.displayList();
         ArrayList<String> stringList = new ArrayList<>();
         for (int i = 0; i < employeeList.size(); i++) {
             if (employeeList.get(i).getEmployeeID().equals(id)) {
