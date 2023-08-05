@@ -1,11 +1,11 @@
 package repository;
 
-import model.person.employee.Employee;
+import model.facility.Facility;
 
-import java.util.ArrayList;
+import java.util.Map;
 
 public interface IRepository<T> {
-    ArrayList<T> displayList();
+    Map<Facility, Integer> displayList();
     void addNew(T t);
     void edit(String id, T t);
     void delete(String id);

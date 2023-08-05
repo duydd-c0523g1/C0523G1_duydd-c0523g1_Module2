@@ -1,12 +1,10 @@
 package repository.employee;
 
+import model.facility.Facility;
 import model.person.employee.Employee;
 import utils.Stream;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 public class EmployeeRepositoryImpl implements IEmployeeRepository {
     private final String FILE_PATH = "D:\\CodeGym\\Git\\C0523G1-duydd-co523g1_Module2\\FuramaResort\\src\\data\\employee.csv";
@@ -24,7 +22,7 @@ public class EmployeeRepositoryImpl implements IEmployeeRepository {
     }
 
     @Override
-    public ArrayList<Employee> displayList() {
+    public Map<Facility, Integer> displayList() {
         ArrayList<Employee> employeeList = new ArrayList<>();
         List<String> stringList = Stream.read(FILE_PATH);
         String[] array = null;

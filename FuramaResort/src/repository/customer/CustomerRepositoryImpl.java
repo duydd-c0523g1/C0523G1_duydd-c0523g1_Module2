@@ -1,12 +1,10 @@
 package repository.customer;
 
+import model.facility.Facility;
 import model.person.customer.Customer;
 import utils.Stream;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 public class CustomerRepositoryImpl implements ICustomerRepository {
     private static final String FILE_PATH = "D:\\CodeGym\\Git\\C0523G1-duydd-co523g1_Module2\\FuramaResort\\src\\data\\customer.csv";
@@ -27,7 +25,7 @@ public class CustomerRepositoryImpl implements ICustomerRepository {
     }
 
     @Override
-    public ArrayList<Customer> displayList() {
+    public Map<Facility, Integer> displayList() {
         ArrayList<Customer> customerList = new ArrayList<>();
         List<String> stringList = Stream.read(FILE_PATH);
         String[] array = null;

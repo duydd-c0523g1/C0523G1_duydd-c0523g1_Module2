@@ -5,7 +5,6 @@ import model.facility.House;
 import model.facility.Room;
 import model.facility.Villa;
 
-import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -28,8 +27,8 @@ public class FacilityRepositoryImpl implements IFacilityRepository {
     }
 
     @Override
-    public ArrayList<Facility> displayList() {
-        return null;
+    public Map<Facility, Integer> displayList() {
+        return facilityMap;
     }
 
     @Override
@@ -44,11 +43,37 @@ public class FacilityRepositoryImpl implements IFacilityRepository {
 
     @Override
     public void delete(String id) {
-
+        for (Facility key : facilityMap.keySet()) {
+            if (key.getServiceId().equals(id)) {
+                facilityMap.remove(key);
+            }
+        }
     }
 
     @Override
-    public void displayListFacilityMaintenance() {
+    public Map<Facility, Integer> displayListFacilityMaintenance() {
+        Map<Facility, Integer> facilityMaintenaceMap = new LinkedHashMap<>();
+        for (Facility key : facilityMap.keySet()) {
+            int bookingFrequency = facilityMap.get(key);
+            if (bookingFrequency >= 5) {
+                facilityMaintenaceMap.put(key, bookingFrequency);
+            }
+        }
+        return facilityMaintenaceMap;
+    }
 
+    @Override
+    public void addNewVilla(Villa villa) {
+        facilityMap.put(villa, 0);
+    }
+
+    @Override
+    public void addNewHouse(House house) {
+        facilityMap.put(house, 0);
+    }
+
+    @Override
+    public void addNewRoom(Room room) {
+        facilityMap.put(room, 0);
     }
 }
