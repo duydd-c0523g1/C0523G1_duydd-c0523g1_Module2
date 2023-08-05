@@ -13,7 +13,7 @@ public class CustomerServiceImpl implements ICustomerService {
 
     @Override
     public void displayList() {
-       List<Customer> customerList = customerRepository.displayList();
+       List<Customer> customerList = (List<Customer>) customerRepository.displayList();
        for (Customer customer : customerList){
            System.out.println(customer);
        }
@@ -45,7 +45,7 @@ public class CustomerServiceImpl implements ICustomerService {
 
     @Override
     public void edit() {
-        List<Customer> customerList = customerRepository.displayList();
+        List<Customer> customerList = (List<Customer>) customerRepository.displayList();
         System.out.println("Nhập ID");
         String id = scanner.nextLine();
         for (int i = 0; i <customerList.size() ; i++) {

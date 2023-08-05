@@ -63,17 +63,17 @@ public class FacilityRepositoryImpl implements IFacilityRepository {
     }
 
     @Override
-    public void addNewVilla(Villa villa) {
+    public void addNewVilla(Facility villa) {
         facilityMap.put(villa, 0);
     }
 
     @Override
-    public void addNewHouse(House house) {
+    public void addNewHouse(Facility house) {
         facilityMap.put(house, 0);
     }
 
     @Override
-    public void addNewRoom(Room room) {
+    public void addNewRoom(Facility room) {
         facilityMap.put(room, 0);
     }
 }

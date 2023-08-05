@@ -46,7 +46,7 @@ public class FacilityServiceImpl implements IFacilityService {
         double poolArea = Double.parseDouble(scanner.nextLine());
         System.out.println("Number of floor: ");
         int floorQuantity = Integer.parseInt(scanner.nextLine());
-        Villa villa = new Villa(facilityID, facilityName, area, rentalFee, maxCapacity, rentalType, roomStandard, poolArea, floorQuantity);
+        Facility villa = new Villa(facilityID, facilityName, area, rentalFee, maxCapacity, rentalType, roomStandard, poolArea, floorQuantity);
         facilityRepository.addNewVilla(villa);
         System.out.println("Done!");
     }
@@ -68,7 +68,7 @@ public class FacilityServiceImpl implements IFacilityService {
         String roomStandard = scanner.nextLine();
         System.out.println("Number of floor: ");
         int floorQuantity = Integer.parseInt(scanner.nextLine());
-        House house = new House(facilityID, facilityName, area, rentalFee, maxCapacity, rentalType, roomStandard, floorQuantity);
+        Facility house = new House(facilityID, facilityName, area, rentalFee, maxCapacity, rentalType, roomStandard, floorQuantity);
         facilityRepository.addNewHouse(house);
     }
 
@@ -88,7 +88,7 @@ public class FacilityServiceImpl implements IFacilityService {
         String rentalType = scanner.nextLine();
         System.out.println("Enter room free included service: ");
         String roomFreeService = scanner.nextLine();
-        Room room = new Room(facilityID, facilityName, area, rentalFee, maxCapacity, rentalType, roomFreeService);
+        Facility room = new Room(facilityID, facilityName, area, rentalFee, maxCapacity, rentalType, roomFreeService);
         facilityRepository.addNewRoom(room);
     }
 

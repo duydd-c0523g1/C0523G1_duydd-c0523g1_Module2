@@ -1,10 +1,13 @@
 package controller.sub_menu;
 
 import controller.FuramaController;
+import service.facility.FacilityServiceImpl;
+import service.facility.IFacilityService;
 
 import java.util.Scanner;
 
 public class FacilityManagement {
+    private static IFacilityService facilityService = new FacilityServiceImpl();
     public static void facilityManagement() {
         int selection;
         Scanner scanner = new Scanner(System.in);
@@ -19,12 +22,16 @@ public class FacilityManagement {
             selection = Integer.parseInt(scanner.nextLine());
             switch (selection) {
                 case 1:
+                    facilityService.displayList();
                     break;
                 case 2:
+                    facilityService.addNew();
                     break;
                 case 3:
+                    facilityService.displayListFacilityMaintenance();
                     break;
                 case 4:
+                    facilityService.delete();
                     break;
                 case 5:
                     FuramaController.displayMainMenu();

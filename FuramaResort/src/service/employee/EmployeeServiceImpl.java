@@ -13,7 +13,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     @Override
     public void displayList() {
-        List<Employee> employeeList = employeeRepository.displayList();
+        List<Employee> employeeList = (List<Employee>) employeeRepository.displayList();
         for (Employee employee : employeeList) {
             System.out.println(employee);
         }
